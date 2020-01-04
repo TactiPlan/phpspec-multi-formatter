@@ -1,0 +1,36 @@
+{
+  "name": "juit/phpspec-multi-formatter",
+  "description": "This project allows to have multiple formatters in one phpspec run (e.g. to have progress output on the console and junit xml generated at the same time)",
+  "license": "MIT",
+  "type": "phpspec-plugin",
+  "authors": [
+    {
+      "name": "Daniel Kreuer",
+      "email": "daniel.kreuer@juit.de"
+    }
+  ],
+  "prefer-stable": true,
+  "require": {
+    "php": "^7.4",
+    "phpspec/phpspec": "^6.1",
+    "symfony/console": "^3.4 || ^4.0 || ^5.0"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Juit\\PhpSpec\\Extension\\MultiFormatter\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Juit\\PhpSpec\\Extension\\MultiFormatter\\Test\\": "tests/"
+    }
+  },
+  "config": {
+    "preferred-install": {
+      "*": "dist"
+    }
+  }
+}

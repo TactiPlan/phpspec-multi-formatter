@@ -1,0 +1,49 @@
+<?php
+
+$finder = \PhpCsFixer\Finder::create()
+	->path('src')
+	->path('tests')
+	->in(__DIR__)
+;
+
+$fileHeader =<<<_EOH_
+This file is part of juit/phpspec-multi-formatter.
+(c) 2019-2020 JUIT GmbH (info@juit.de)
+(c) 2019-2020 Daniel Kreuer (daniel.kreuer@juit.de)
+_EOH_;
+
+
+return \PhpCsFixer\Config::create()
+	->setIndent("\t")
+	->setRules([
+		'@PSR2' => true,
+		'@Symfony' => true,
+		'@PhpCsFixer' => true,
+		'array_syntax' => ['syntax' => 'short'],
+		'backtick_to_shell_exec' => true,
+		'phpdoc_to_comment' => false,
+		'simplified_null_return' => true,
+		'strict_param' => true,
+		'global_namespace_import' => [
+			'import_classes' => true,
+			'import_constants' => true,
+			'import_functions' => true,
+		],
+		'header_comment' => [
+			'comment_type' => 'PHPDoc',
+			'header' => $fileHeader,
+			'location' => 'after_open',
+			'separate' => 'bottom',
+		],
+		'array_indentation' => true,
+		'indentation_type' => true,
+		'method_separation' => true,
+		'declare_strict_types' => true,
+		'dir_constant' => true,
+		'final_class' => true,
+		'final_internal_class' => true,
+		'final_public_method_for_abstract_class' => true,
+	])
+	->setRiskyAllowed(true)
+	->setFinder($finder)
+;

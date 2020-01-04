@@ -1,0 +1,12 @@
+suites:
+    default: "ExampleApp"
+
+extensions:
+    Juit\PhpSpec\Extension\MultiFormatter\MultiFormatterExtension:
+        format:
+            - progress
+            - junit
+            - tap
+        output:
+            junit: build/junit/junit.xml
+            tap: build/tap.txt

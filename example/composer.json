@@ -1,0 +1,27 @@
+{
+	"name": "juit/phpspec-multi-formatter-example",
+	"type": "project",
+	"require-dev": {
+		"phpspec/phpspec": "^6.1",
+		"juit/phpspec-multi-formatter": "@dev"
+	},
+	"repositories": [
+		{
+			"type": "path",
+			"url": "../"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"ExampleApp\\": "src/"
+		}
+	},
+	"scripts": {
+		"pre-install-cmd": [
+			"rm -rf vendor/juit/phpspec-multi-formatter && mkdir -p vendor/juit && ln -s ../../../ vendor/juit/phpspec-multi-formatter"
+		],
+		"pre-update-cmd": [
+			"rm -rf vendor/juit/phpspec-multi-formatter && mkdir -p vendor/juit && ln -s ../../../ vendor/juit/phpspec-multi-formatter"
+		]
+	}
+}
