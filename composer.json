@@ -11,8 +11,8 @@
   ],
   "prefer-stable": true,
   "require": {
-    "php": "^7.4",
-    "phpspec/phpspec": "^6.1",
+    "php": "^7.4 || ^8.0",
+    "phpspec/phpspec": "^6.1 || ^7" ,
     "symfony/console": "^3.4 || ^4.0 || ^5.0"
   },
   "require-dev": {
